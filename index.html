@@ -28,21 +28,21 @@
     <main>
         <div class="spot" id="0">
             <div class="box">
-                <div>
+                <a href="#">
                     <p>CHECK IN</p>
                     <div>
                         <b>2024. 02. 07</b>
                         <small>(수)</small>
                     </div>
-                </div>
+                </a>
 
-                <div>
+                <a href="#">
                     <p>CHECK OUT</p>
                     <div>
                         <b>2024. 05. 05</b>
                         <small>(일)</small>
                     </div>
-                </div>
+                </a>
 
                 <div class="openmenu">
                     <p>ROOM</p>
@@ -69,8 +69,6 @@
                 </div>
 
                 <a class="search" href="#"><img src="./img/icon_search.svg" alt=""></a>
-
-                
             </div>
         </div>
 
@@ -80,20 +78,19 @@
                     <small>ROOM</small>
                     <h2>객실안내</h2>
                 </div>
-                <a href="#">VIEW MORE</a>
+                <a class="viewmore" href="#">VIEW MORE</a>
             </div>
 
             <div class="contents">
-                <p class="image"><img src="./img/img_room-203.jpg" alt=""></p>
-                <figure>
-                    <p class="image"><img src="./img/img_room-201.jpg" alt=""></p>
-                    <figcaption>
+                <a class="side" href="#"><img src="./img/img_room-203.jpg" alt=""></a>
+                <a class="mid" href="#">
+                    <p class="mainimg"><img src="./img/img_room-201.jpg" alt=""></p>
+                    <div>
                         <b>LOVE YOU #201</b>
                         <p>언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.</p>
-                    </figcaption>
-                </figure>
-                <p class="image"><img src="./img/img_room-202.jpg" alt=""></p>
-
+                    </div>
+                </a>
+                <a class="side" href="#"><img src="./img/img_room-202.jpg" alt=""></a>
             </div>
 
             <div class="bar-btn">
@@ -116,31 +113,24 @@
                     <small>FACILITIES</small>
                     <h2>시설안내</h2>
                 </div>
-                <a href="#">VIEW MORE</a>
+                <a class="viewmore" href="#">VIEW MORE</a>
             </div>
 
-            <div class="contents">
-                <span class="open">
-                    <img src="./img/img_facilities-1.jpg" alt="">
-                    <div class="details">
-                        <p>SWIMMING POOL</p>
-                        <div class="empty-box"></div>
-                    </div>
-                </span>
-                <span class="fold">
-                    <img src="./img/img_facilities-2.jpg" alt="">
-                    <div class="details">
-                        <p>ROOF TOP</p>
-                        <div class="empty-box"></div>
-                    </div>
-                </span>
-                <span class="fold">
-                    <img src="./img/img_facilities-3.jpg" alt="">
-                    <div class="details">
-                        <p>BARBECUE</p>
-                        <div class="empty-box"></div>
-                    </div>
-                </span>
+            <div class="contents2">
+                <a class="imgbox" href="#">
+                    SWIMMING POOL
+                    <div></div>
+                </a>
+
+                <a class="imgbox" href="#">
+                    ROOF TOP
+                    <div></div>
+                </a>
+                
+                <a class="imgbox" href="#">
+                    BARBECUE
+                    <div></div>
+                </a>
             </div>
         </section>
 
@@ -157,12 +147,14 @@
                         다온에서의 즐거운 추억을 만들어보세요!
                     </p>
                 </div>
+
                 <p><img src="./img/img_around-3.jpg" alt=""></p>
             </div>
+
             <div class="bottom">
                 <p>
                     <img src="./img/img_around-2.jpg" alt="">
-                    <a href="#">VIEW MORE</a>
+                    <a class="viewmore" href="#">VIEW MORE</a>
                 </p>
                 <p><img src="./img/img_around-1.jpg" alt=""></p>
             </div>
@@ -174,20 +166,20 @@
                     <small>EVENT</small>
                     <h2>이벤트</h2>
                 </div>
-                <a href="#">VIEW MORE</a>
+                <a class="viewmore" href="#">VIEW MORE</a>
             </div>
 
             <div class="contents">
-                <div class="box">
+                <a class="box" href="#">
                     <img src="./img/img_event-sale.jpg" alt="">
                     <p>EVENT</p>
                     <div>
                         <p>성수기 할인이벤트</p>
                         <p>2024. 06. 24 ~ 2024. 06. 24</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="box">
+                <a class="box" href="#">
                     <img src="./img/img_event-insta.jpg" alt="">
                     <p>EVENT</p>
                     <div>
@@ -197,9 +189,9 @@
                         </p>
                         <p>2024. 06. 24 ~ 2024. 06. 24</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="box">
+                <a class="box" href="#">
                     <img src="./img/img_event-review.jpg" alt="">
                     <p>EVENT</p>
                     <div>
@@ -209,7 +201,7 @@
                         </p>
                         <p>2024. 06. 24 ~ 2024. 06. 24</p>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="bar-btn">
@@ -232,7 +224,7 @@
                     <small>CONTECT</small>
                     <h2>오시는 길</h2>
                 </div>
-                <a href="#">VIEW MORE</a>
+                <a class="viewmore" href="#">VIEW MORE</a>
             </div>
 
             <!-- kakao map -->
@@ -249,10 +241,10 @@
 
             <div class="details">
                 <div class="left">
-                    <a class="tap">
-                        <p>위치안내</p>
-                        <p>대중교통</p>
-                    </a>
+                    <div class="btn">
+                        <a href="#">위치안내</a>
+                        <a href="#">대중교통</a>
+                    </div>
                     <div class="text">
                         <div>
                             <img src="./img/icon_location.svg" alt="">
@@ -272,7 +264,7 @@
                 </div>
 
                 <div class="right">
-                    <a class="service">
+                    <a class="btn" href="#">
                         <img src="./img/icon_car.svg" alt="">
                         픽업서비스
                     </a>

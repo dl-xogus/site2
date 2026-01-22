@@ -4,7 +4,7 @@
 /* ===== spot ===== */
 .spot {
     width: 100%;
-    height: 1000px;
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/img_spot-main.jpg') 0 0 / cover no-repeat;
     position: relative;
 }
@@ -23,9 +23,10 @@
     justify-content: space-around;
     gap: 75px;
 }
+.spot .box > a { color: white; }
+.spot .box > a > div > b {font-size: 32px; }
+.spot .box > a > div > small { font-size: 20px; }
 .spot .box > div > p { font-size: 20px; }
-.spot .box > div > div > b { font-size: 32px; }
-.spot .box > div > div > small { font-size: 20px; }
 .spot .box .openmenu {
     display: flex;
     flex-direction: column;
@@ -55,84 +56,62 @@
     gap: 40px;
 }
 .room .contents img { border-radius: 20px; }
-.room .contents > figure {
-    position: relative;
-}
-.room .contents > figure > p {
+.room .contents .mid { position: relative; }
+.room .contents .mainimg {
     width: 1400px;  height: 755px;
     border-radius: 20px;
     overflow: hidden;
 }
-.room .contents > figure > p > img { width: 100%; }
-.room .contents > figure > figcaption {
+.room .contents .mid img {
+    width: 100%;
+    transition: 0.3s;
+}
+.room .contents .mid:hover img { transform: scale(1.05); }
+.room .contents .mid > div {
     position: absolute;
     left: 5%; bottom: 5%;
 }
-.room .contents > figure > figcaption > b {
+.room .contents .mid > div > b {
     font-size: 40px;
     color: white;
 }
-.room .contents > figure > figcaption > p {
+.room .contents .mid > div > p {
     font-size: 24px;
     color: white;
 }
-
-
 
 /* ===== facilities ===== */
-.faciliries .contents {
-    width: 1400px;
+.faciliries .contents2 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
     display: flex;
 }
-
-.faciliries .contents > span {
-    display: flex;
-    justify-content: center;
-}
-
-.faciliries .contents .open {
-    width: 50%;
-    overflow: hidden;
-    position: relative;
-}
-.faciliries .contents .open > img { width: 100%; }
-.faciliries .contents .open .details {
-    position: absolute;
-    bottom: 8%;
-}
-.faciliries .contents .open .details > p {
+.faciliries .contents2 .imgbox {
+    margin: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 800px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/img_facilities-1.jpg') center center / cover no-repeat;
+    padding: 72px 64px;
     font-size: 24px;
     color: white;
     font-weight: bold;
-    padding-bottom: 16px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
-.faciliries .contents .open .details > div {
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 2px;
-    width: 552px;
-}
+.faciliries .contents2 .imgbox:hover { flex-grow: 2; }
+.faciliries .contents2 .imgbox:nth-of-type(2) { background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/img_facilities-2.jpg') center center / cover no-repeat; }
+.faciliries .contents2 .imgbox:nth-of-type(3) { background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/img_facilities-3.jpg') center center / cover no-repeat; }
 
-.faciliries .contents .fold {
-    width: 25%;
-    overflow: hidden;
-    filter: brightness(0.8);
-}
-.faciliries .contents .fold .details {
-    position: absolute;
-    bottom: 8%;
-}
-.faciliries .contents .fold .details > p {
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
-    padding-bottom: 16px;
-}
-.faciliries .contents .fold .details > div {
+.faciliries .contents2 .imgbox > div {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 2px;
-    width: 232px;
+    margin-top: 16px;
+    width: 100%;
 }
-.faciliries .contents .fold > img { height: 100%; }
 
 /* ===== around ===== */
 .around .top{
@@ -154,6 +133,9 @@
     content: url('../img/icon_right.svg');
     padding-left: 10px;
 }
+
+.around p > img { transition: 0.3s; }
+.around p:hover > img { transform: scale(0.97); }
 
 .around .top { width: 1400px; }
 .around .top > p { padding-bottom: 20px; }
@@ -179,27 +161,35 @@
 }
 .event .contents .box {
     position: relative;
+    border-radius: 20px;
+    transition: 0.3s;
 }
-.event .contents .box > img {
+.event .contents .box img {
     border-radius: 20px;
     box-shadow: 0px 8px 20px 4px rgba(0, 0, 0, 0.1);
 }
+.event .contents .box:hover { transform: scale(0.97); }
 .event .contents .box > p {
     position: absolute;
     left: 24px; top: 24px;
     font-size: 12px;
+    font-weight: bold;
     color: white;
     background-color: black;
     border-radius: 8px;
     padding: 8px 12px;
+    transition: 0.3s;
 }
 .event .contents .box > div {
     position: absolute;
     left: 0; bottom: 0;
-    width: 50%;
+    width: 50%; height: 160px;
     background-color: white;
     border-radius: 0 20px 0 20px;
     padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .event .contents .box > div > p:nth-of-type(1) {
     font-size: 20px;
@@ -221,7 +211,7 @@
 .contect .details .left { width: 50%; }
 .contect .details .right { width: 50%; }
 
-.contect .details a { margin-bottom: 40px; }
+.contect .details .btn { margin-bottom: 40px; }
 
 .contect .details .text {
     display: flex;
@@ -229,7 +219,7 @@
     gap: 20px;
 }
 
-.contect .details .left .tap {
+.contect .details .left .btn {
     display: flex;
     background-color: #efefef;
     border-radius: 8px;
@@ -240,28 +230,26 @@
     font-size: 20px;
     padding: 8px;
 }
-.contect .details .left .tap > p:nth-of-type(1) {
-    color: #2f2f2f;
-    background-color: white;
-    border-radius: 8px;
-    width: 103px; height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contect .details .left .tap > p:nth-of-type(2) {
+
+.contect .details .left .btn > a {
     color: #afafaf;
     width: 103px; height: 48px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s;
+}
+.contect .details .left .btn > a:hover {
+    color: #2f2f2f;
+    background-color: white;
 }
 .contect .details .left .text .bottom {
     display: flex;
     gap: 73px;
 }
 
-.contect .details .right .service {
+.contect .details .right .btn {
     display: inline-block;
     width: 180px; height: 64px;
     background-color: #2f2f2f;
@@ -270,5 +258,8 @@
     line-height: 64px;
     color: white;
     font-size: 20px;
+    transition: 0.2s;
 }
+.contect .details .right .btn:hover { background-color: rgb(91, 72, 255); }
+
 .contect .details .right .text span { font-weight: bold; }
